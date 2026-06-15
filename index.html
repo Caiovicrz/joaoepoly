@@ -68,29 +68,6 @@
             position: relative;
         }
 
-        .logo-top {
-            margin-bottom: 30px;
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            animation: fadeIn 1.2s ease forwards;
-        }
-
-        .logo-top img {
-            width: 140px;
-            max-width: 100%;
-            display: block;
-        }
-
-        .logo-top .logo-caption {
-            font-family: 'Playfair Display', serif;
-            font-size: 0.9rem;
-            letter-spacing: 4px;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-        }
-
         .hero-content h1 {
             font-family: 'Playfair Display', serif;
             font-size: 4.5rem;
@@ -298,6 +275,13 @@
             opacity: 0.9;
         }
 
+        .footer-logo {
+            width: 90px;
+            max-width: 100%;
+            margin-bottom: 12px;
+            opacity: 0.85;
+        }
+
         .machines-love {
             font-size: 0.8rem;
             letter-spacing: 4px;
@@ -421,10 +405,6 @@
 
     <section class="hero">
         <div class="hero-content">
-            <div class="logo-top">
-                <img src="Fotos/cyborgues.png" alt="Logo Cyborgues">
-                <p class="logo-caption">MÁQUINAS IN LOVE ❤️</p>
-            </div>
             <h1>Polyana & João Pedro</h1>
             <p class="subtitle">Algumas histórias não precisam de explicação. Elas simplesmente acontecem...</p>
             <button class="btn-primary" onclick="startStory()">Nossa História ✨</button>
@@ -480,6 +460,7 @@
         <p class="footer-note">Feliz Dia dos Namorados.</p>
         
         <div class="cyborgues-signature">
+            <img class="footer-logo" src="Fotos/cyborgues.png" alt="Logo Cyborgues">
             <p class="machines-love">MÁQUINAS IN LOVE ❤️</p>
             <p class="cyborgues-credit">By Caio</p>
         </div>
