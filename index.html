@@ -374,6 +374,8 @@
             .letter-card { padding: 40px 20px; }
             .music-toggle { top: 20px; right: 20px; width: 48px; height: 48px; }
         }
+
+        .hidden { display: none; }
     </style>
 </head>
 <body>
@@ -400,31 +402,9 @@
         </div>
     </section>
 
-    <section class="story-container" id="storySection">
+    <section class="story-container hidden" id="storySection">
         <h2 class="section-title">Nossos Momentos 📸</h2>
         
-        <div class="story-row">
-            <div class="story-img-wrapper">
-                <img src="Fotos/blusa azul.jpeg" alt="Momento blusa azul">
-            </div>
-            <div class="story-text">
-                <span class="chapter-number">I</span>
-                <h3>O começo</h3>
-                <p>"Você virou parte dos meus melhores dias sem nem perceber!"</p>
-            </div>
-        </div>
-
-        <div class="story-row reverse">
-            <div class="story-img-wrapper">
-                <img src="Fotos/blusa rosa bejinho.jpeg" alt="Momento blusa rosa bejinho">
-            </div>
-            <div class="story-text">
-                <span class="chapter-number">II</span>
-                <h3>Nossa história</h3>
-                <p>"Entre todos os capítulos da minha vida, você é um dos meus favoritos."</p>
-            </div>
-        </div>
-
         <div class="story-row vertical-focus">
             <div class="story-img-wrapper">
                 <img src="Fotos/cheiro no cangote.jpeg" alt="Momento cheiro no cangote">
@@ -437,14 +417,14 @@
         </div>
     </section>
 
-    <section class="message-section">
+    <section class="message-section hidden">
         <div class="letter-card">
             <p class="letter-text">"Eu amo muito você, minha agro girl! ❤️"</p>
             <div class="signature">— João Pedro</div>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <footer class="main-footer hidden">
         <h2>Polyana ❤️ João Pedro</h2>
         <p class="footer-note">Feliz Dia dos Namorados.</p>
         
@@ -456,11 +436,15 @@
 
     <script>
         function startStory() {
-            document.getElementById('storySection').scrollIntoView({ behavior: 'smooth' });
-            
+            // revelar conteúdo oculto
+            document.querySelectorAll('.hidden').forEach(el => el.classList.remove('hidden'));
+
+            const section = document.getElementById('storySection');
+            if (section) section.scrollIntoView({ behavior: 'smooth' });
+
             const music = document.getElementById('bgMusic');
             const toggleBtn = document.getElementById('musicToggle');
-            
+
             music.play().then(() => {
                 toggleBtn.classList.add('playing');
             }).catch((error) => {
